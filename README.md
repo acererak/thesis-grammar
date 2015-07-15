@@ -20,3 +20,4 @@ For example, this could be the beginning of a grammar file for an English senten
 According to my design, the Grammar class cycles through a grammar file that contains all possible elements of hundreds of different thesis statements for a freshman Humanities 110 paper, generating in its output a successful argument about ancient lit.
 
 To test, open thesis.grm, Grammar.py, and thesis.py, and then execute thesis.py in your text editor.
+
