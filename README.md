@@ -6,16 +6,28 @@ Three files comprise this project. Grammar.py designs a Grammar class that has t
 For example, this could be the beginning of a grammar file for an English sentence:
 
 < sentence > ::= < noun_phrase > < verb >
+
+
 < noun_phrase > ::= < proper_noun >
+
 < noun_phrase > ::= < article > < noun >
+
 < noun_phrase > ::= < article > < adjective > < noun >
+
 < article > ::= THE
+
 < article > ::= A
+
 < noun > ::= COW
+
 < noun > ::= FOX
+
 < adjective > ::= BROWN
+
 < adjective > ::= LAZY
+
 < verb > ::= JUMPS
+
 < proper_noun > ::= ZAK
 
 According to my design, the Grammar class cycles through a grammar file that contains all possible elements of hundreds of different thesis statements for a freshman Humanities 110 paper, generating in its output a successful argument about ancient lit.
