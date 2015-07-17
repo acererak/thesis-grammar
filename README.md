@@ -30,6 +30,8 @@ For example, this could be the beginning of a grammar file for an English senten
 
 < proper_noun > ::= ZAK
 
+A successful Grammar class could, when called to generate any of a number of statement types from this grammar list, cycle through its contents to create a randomly generated, grammatically correct sentence such as “The lazy fox jumps,” or “A brown cow jumps.”
+
 According to my design, the Grammar class cycles through a grammar file that contains all possible elements of hundreds of different thesis statements for a freshman Humanities 110 paper, generating in its output a successful argument about ancient lit.
 
 To test, open thesis.grm, Grammar.py, and thesis.py, and then execute thesis.py in your text editor.
