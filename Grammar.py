@@ -15,7 +15,6 @@ class Grammar:
     #
     def __init__(self, start_string=None):
         pass
-
         self.start = start_string
         self.rules = { }
 
@@ -24,7 +23,6 @@ class Grammar:
     # Reads a grammar from a file with the given name.
     #
     def read(self, filename):
-
         file = open(filename,'r')
         line = file.readline()[:-1]
         while line != '':
@@ -53,13 +51,11 @@ class Grammar:
         
         # check to see if the left hand value (var) is already in the rules dictionary
         if var in self.rules:
-
             # append the new rhs to the var key
             self.rules[var].append(rhs)
 
         # if var is not in the dictionary...
         else:
-
             # create a new entry for it
             self.rules[var] = [rhs]
 
@@ -82,19 +78,14 @@ class Grammar:
 
     def __getitem__(self,var):
 
-
         # check to see if the entry exists in the dictionary
         if var in self.rules:
-            
             # then supply a random element from its list
             RHSs = self.rules[var]
             rlen = len(RHSs)
             r = int(random() * rlen)
-
             return RHSs[r]
-
         else:
-
             return var
 
     def generate(self):
@@ -117,17 +108,14 @@ class Grammar:
     #
 
     def applyTo(self,derived_string=None):
-
-        #
+        
+        # generates a new string extracted according to the application
+        # of a given grammar rule
         new_array = derived_string.split(' ') 
-
         l = len(new_array)
-
         for i in range (l):
-
             new_array[i] = self[new_array[i]]
 
         new_string = ' '.join(new_array)
-
         return new_string
 
